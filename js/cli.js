@@ -52,7 +52,8 @@ const configFile = yargs.configFile || 'solcpiler.json';
 
 api.runFromConfigFile(configFile, optsCommandLine, (err) => {
   if (err) {
-    console.error('ERROR:');
-    console.error(err);
+    err.forEach((e) => {
+      console.log(e);
+    });
   }
 });
