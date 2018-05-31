@@ -31,7 +31,7 @@ const yargs = require('yargs')
     type: 'boolean',
   })
   .help()
-  .argv
+  .argv;
 
 /*
 if (yargs.help === true) {
@@ -52,8 +52,7 @@ const configFile = yargs.configFile || 'solcpiler.json';
 
 api.runFromConfigFile(configFile, optsCommandLine, (err) => {
   if (err) {
-    /*eslint no-console: "allow"*/
-    console.error("ERROR:", err);
+    console.error('ERROR:');
+    console.error(err);
   }
 });
-
